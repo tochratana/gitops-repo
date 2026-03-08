@@ -15,7 +15,7 @@ image:
 imagePullSecrets: []
 # This is to override the chart name.
 nameOverride: ""
-fullnameOverride: "spring-file-upload-app"
+fullnameOverride: "spring deployment app"
 # This section builds out the service account more information can be found here: https://kubernetes.io/docs/concepts/security/service-accounts/
 serviceAccount:
   # Specifies whether a service account should be created
@@ -57,14 +57,14 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-    - host: nginx-spring-file-upload.tochratana.com
+    - host: spring-dpl.tochratana.com
       paths:
         - path: /
           pathType: Prefix
   tls:
-    - secretName: nginx-demo-tls
+    - secretName: spring-dpl
       hosts:
-        - nginx-spring-file-upload.tochratana.com
+        - spring-dpl.tochratana.com
 resources: {}
 # We usually recommend not to specify default resources and to leave this as a conscious
 # choice for the user. This also increases chances charts run on environments with little
