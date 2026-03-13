@@ -1,0 +1,3 @@
+test: I just test go template
+version: 1.0.0
+name: 'testing-dpl'

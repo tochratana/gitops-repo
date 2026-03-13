@@ -1,0 +1,5 @@
+apiVersion: {{ .Values.version }}
+kind: Deployment
+metadata: 
+  name: {{ .Values.name }}
+test: {{ .Values.test }}
